@@ -267,87 +267,132 @@
 // console.log(count);
 /////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////-5-////////////////////////////////
-let tasks= ["item 1","item 2","item 3","item 4"];
-let ul = document.querySelector('.list-group'),
-		form = document.forms['addTodoItem'],
-		inputText = form.elements['todoText'];
+// let tasks= ["item 1","item 2","item 3","item 4"];
+// let ul = document.querySelector('.list-group'),
+// 		form = document.forms['addTodoItem'],
+// 		inputText = form.elements['todoText'];
 
-function listTamlate(task){
-	let li = document.createElement('li');
-	li.textContent = task;
-	li.className = 'list-group-item d-flex align-items-center';
-	let iDelete = document.createElement('i');
-	iDelete.className = 'fas fa-trash-alt delete-item ml-auto';
-	li.appendChild(iDelete);
-	return li;
+// function listTamlate(task){
+// 	let li = document.createElement('li');
+// 	li.textContent = task;
+// 	li.className = 'list-group-item d-flex align-items-center';
+// 	let iDelete = document.createElement('i');
+// 	iDelete.className = 'fas fa-trash-alt delete-item ml-auto';
+// 	li.appendChild(iDelete);
+// 	return li;
 
-};
+// };
 
-function clearList() {	
-	ul.innerHTML = '';
-};
+// function clearList() {	
+// 	ul.innerHTML = '';
+// };
 
-function generateList(tasksArray){
-	clearList();
-	for (let i = 0; i < tasksArray.length; i++) {
-		let li = listTamlate(tasksArray[i]);
-		ul.appendChild(li);
-	};
-	if(!ul.children[0]){
-		createAlert('alert-info','Empty list.');
-	}
+// function generateList(tasksArray){
+// 	clearList();
+// 	for (let i = 0; i < tasksArray.length; i++) {
+// 		let li = listTamlate(tasksArray[i]);
+// 		ul.appendChild(li);
+// 	};
+// 	if(!ul.children[0]){
+// 		createAlert('alert-info','Empty list.');
+// 	}
 
-}
+// }
 
-function addList(list){
-	tasks.unshift(list);
-	ul.insertAdjacentElement('afterbegin', listTamlate(list));
-}
+// function addList(list){
+// 	tasks.unshift(list);
+// 	ul.insertAdjacentElement('afterbegin', listTamlate(list));
+// }
 
-function deleteListItem(target){
-	let parent = target.closest('li');
-	let index = tasks.indexOf(parent.textContent);
-	tasks.splice(index, 1);
-	parent.remove();
-}
-function createAlert (alertName, alertText, pos){
-	let div = document.createElement('div');
-	div.className = 'alert alert-dismissible mt-3 ' + alertName;
-	div.innerHTML = '<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> '+ alertText;
-	pos.appendChild(div);
-}
-
-
-ul.addEventListener('click', function(e){
-	if(e.target.classList.contains('delete-item')){
-		deleteListItem(e.target);
-		createAlert('alert-danger','Task has been removed success', form);
-		if(!ul.children[0]){
-			createAlert('alert-info','Empty list.' , ul);
-		}
-	}
-});
-form.addEventListener('submit', function(e){
-	e.preventDefault();
-	if(!inputText.value){
-		inputText.classList.add('is-invalid');
-	}
-	else{
-		addList(inputText.value);
-		form.reset();
-		createAlert('alert-success','Task added success!', form);
-	}
-});
-inputText.addEventListener('keyup',function(e){
-	inputText.classList.remove('is-invalid');
-});
-document.getElementById('clear').addEventListener('click',function(e){
-	clearList();
-	if(!ul.children[0]){
-		createAlert('alert-info','Empty list.', ul);
-	}
-});
+// function deleteListItem(target){
+// 	let parent = target.closest('li');
+// 	let index = tasks.indexOf(parent.textContent);
+// 	tasks.splice(index, 1);
+// 	parent.remove();
+// }
+// function createAlert (alertName, alertText, pos){
+// 	let div = document.createElement('div');
+// 	div.className = 'alert alert-dismissible mt-3 ' + alertName;
+// 	div.innerHTML = '<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> '+ alertText;
+// 	pos.appendChild(div);
+// }
 
 
-generateList(tasks);
-
+// ul.addEventListener('click', function(e){
+// 	if(e.target.classList.contains('delete-item')){
+// 		deleteListItem(e.target);
+// 		createAlert('alert-danger','Task has been removed success', form);
+// 		if(!ul.children[0]){
+// 			createAlert('alert-info','Empty list.' , ul);
+// 		}
+// 	}
+// });
+// form.addEventListener('submit', function(e){
+// 	e.preventDefault();
+// 	if(!inputText.value){
+// 		inputText.classList.add('is-invalid');
+// 	}
+// 	else{
+// 		addList(inputText.value);
+// 		form.reset();
+// 		createAlert('alert-success','Task added success!', form);
+// 	}
+// });
+// inputText.addEventListener('keyup',function(e){
+// 	inputText.classList.remove('is-invalid');
+// });
+// document.getElementById('clear').addEventListener('click',function(e){
+// 	clearList();
+// 	if(!ul.children[0]){
+// 		createAlert('alert-info','Empty list.', ul);
+// 	}
+// });
+// generateList(tasks);
+/////////////////////////////////////////////////////////////////////////////-les 7////////////////////////////////////////////////////////////////X
+// const rectangle = {
+// 	width : 10,
+// 	height : 20,
+// 	qetSquare : function(width,height){
+// 		return this.width * this.height;
+// 	}
+// }
+// console.log(rectangle.qetSquare());
+//////////////////////////////////////////
+// const price = {
+// 	price: 10,
+// 	discount : 20,
+// 	getPrice : function (){return this.price},
+// 	getPriceDisc : function (){return (100-this.discount) * this.price/100}
+//  }
+//  console.log(price.getPriceDisc());
+//////////////////////////////////////////////
+// const user = {
+// 	name : 'Dima',
+// 	getUserName : function(){return this.name}
+// }
+// console.log(user.getUserName())
+///////////////////////////////////////////////////////
+// const height = {
+// 	height : 10,
+// 	heightUp : function () {return this.height++ }
+// }
+// console.log(height.heightUp());
+// console.log(height.heightUp());
+// console.log(height.heightUp());
+// console.log(height.height);
+// /////////////////////////////////////////
+// const numerator = {
+// 	value : 6,
+// 	double : function(){this.value=2*this.value;return this},
+// 	plusOne : function(){this.value++;return this},
+// 	minusOne : function(){this.value--;return this}
+// }
+// // console.log(numerator.double());
+// // console.log(numerator.value);
+// // console.log(numerator.plusOne());
+// // console.log(numerator.value);
+// // console.log(numerator.minusOne());
+// // console.log(numerator.value);
+// numerator.minusOne().double().plusOne();
+// console.log(numerator.value)
+/////////////////////////////////////////////////////////
