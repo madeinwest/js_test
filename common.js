@@ -396,3 +396,31 @@
 // numerator.minusOne().double().plusOne();
 // console.log(numerator.value)
 /////////////////////////////////////////////////////////
+// function getList(){return this.list}
+// let users = {
+// 	length: 4,
+// 	list : ['abl', 'loc', 'doc']
+// }
+// console.log(getList());
+// users.getList=getList;
+// console.log(users.getList());
+// console.log(getList.call(users) + '12');
+///////////////////////////////////////////////////////////
+// let priceRoz = {
+// 	price : 3,
+// 	count : 12,
+// 	fullPrice : function(){
+// 		return this.price * this.count
+// 	}
+// }
+// console.log(priceRoz.fullPrice());
+// ////////////
+// let priceRozNext = {
+// 	price : 5,
+// 	count : 4
+// }
+// priceRozNext.fullPrice = priceRoz.fullPrice;
+// console.log(priceRozNext.fullPrice());
+///////////////////////////////////////////////////////////////
+let sizes = {width:5,height : 10},
+						getSquare = function(){return this.width * this.height};
