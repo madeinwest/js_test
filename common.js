@@ -422,5 +422,105 @@
 // priceRozNext.fullPrice = priceRoz.fullPrice;
 // console.log(priceRozNext.fullPrice());
 ///////////////////////////////////////////////////////////////
-let sizes = {width:5,height : 10},
-						getSquare = function(){return this.width * this.height};
+// let sizes = {width:5,height : 10},
+// 						getSquare = function(){return this.width * this.height};// console.log(getSquare.apply(sizes));
+/////////////////////////////////////////////////////////////////
+// let numbers = [4,12,0,10,-2,-4];
+// console.log(Math.min.apply(null, numbers))
+///////////////////////////////////////////////////////////////////
+// const element = {
+// 	height : '17px',
+// 	marginTop: '5px',
+// 	marginBottom: '5px',
+// 	getFullHeight: function(){
+// 		return parseInt(this.height) + parseInt(this.marginTop) + parseInt(this.marginBottom);
+// 	}
+// }
+// console.log(element.getFullHeight());
+// let block = {
+// 	height: '5px',
+// 	marginTop : '3px',
+// 	marginBottom: '3px'
+// }
+// console.log(element.getFullHeight.apply(block))
+////////////////////////////////////////////////////////////////////////
+// let element = {
+// 	height : 25,
+// 	getHeight: function(){
+// 		return this.height;
+// 	}
+// };
+// let getElementHeight = element.getHeight.bind(element);
+// console.log(getElementHeight());
+/////////////////////////////////////////////////////////////////////////////----les 8----////////////////////////////////////////////////////////////////
+// console.log(getBigName(userName));
+// function getBigName(name){
+// 	name = name + '';
+// 	return name.toUpperCase();
+// }
+// var userName = 'ivan';
+// console.log(getBigName(userName));
+///////////////////////////////////////////////////////////////
+// function test(){
+// 	var name = "vasya";
+// 	return getBigName(userName);
+// }
+// function getBigName(name){
+// 	name = name +'';
+// 	return name.toUpperCase();
+// }
+// var userName = 'Ivan';
+// console.log(test());
+///////////////////////////////////////////////////////////////
+// var food = 'cucumber';
+// (function(){
+// 	food = 'bread';
+// 	getFood();
+// })();
+// function getFood() {
+// 	console.log(food)
+// }
+///////////////////////////////////////////////////////////////
+// var dollar,
+// 		getDollar;
+// (function(){
+// 	var dollar = 0;
+// 	getDollar = function(){
+// 		return dollar;
+// 	}
+// }());
+
+// dollar = 30;
+// console.log(getDollar())
+///////////////////////////////////////////////////////////////
+// var greet = 'Hello';
+// (function(){
+// 	var text = "World";
+// 	console.log(greet + ' ' + text)
+// })();
+// console.log(greet + text)
+///////////////////////////////////////////////////////////////
+// function minus(arg1=0) {
+// 	return function (arg2=0){
+// 		return arg1 - arg2
+// 	}
+// }
+// console.log(minus()(6))
+///////////////////////////////////////////////////////////////
+// function multiplyMaker (arg1){
+// 	let count = 1 * arg1;
+// 	return function(multNum){
+// 		return	count *= multNum
+// 	}
+// }
+// const multiply = multiplyMaker(2);
+// multiply(3);
+// multiply(3);
+// multiply(3);
+// console.log(multiply(1))
+///////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////----les 9----////////////////////////////////////////////////////////////////
+
