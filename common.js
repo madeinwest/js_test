@@ -519,8 +519,60 @@
 // multiply(3);
 // console.log(multiply(1))
 ///////////////////////////////////////////////////////////////
-
+// let text= '';
+// const toDoString = (function(){
+// 	function setString(str=''){
+// 		return text+=str + '';
+// 	}
+// 	function getString(){
+// 		return text;
+// 	};
+// 	function getLength(){
+// 		return textLemght = text.length;
+// 	}
+// 	function reverse(){
+// 		return text = text.split('').reverse().join('');
+// 	}
+// 	return{
+// 		setString:setString,
+// 		getString:getString,
+// 		getLength:getLength,
+// 		reverse:reverse
+// 	}
+// }());
+// toDoString.setString(12345);
+// console.log(toDoString.reverse());
 ///////////////////////////////////////////////////////////////
-
-/////////////////////////////////////////////////////////////////////////////----les 9----////////////////////////////////////////////////////////////////
+let value= 0;
+let calculator = (function(){
+	function setValue(newValue){
+		value=newValue;
+		return this
+	}
+	function plus(amp){
+		value += amp;
+		return this
+	}
+	function multiply(multp){
+		value *= multp
+	}
+	function sq (sqVal){
+		value *= value;
+	}
+	function getValue(){
+		return value
+	}
+	return{
+		setValue:setValue,
+		plus: plus,
+		multiply: multiply,
+		sq:sq,
+		getValue:getValue
+	}
+}());
+calculator.setValue(2);
+calculator.multiply(6);
+calculator.sq();
+console.log(value)
+///////////////////////////////////////////////////////////////////////////----les 9----////////////////////////////////////////////////////////////////
 
