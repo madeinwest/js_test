@@ -574,6 +574,6 @@ let calculator = (function(){
 calculator.setValue(2);
 calculator.multiply(6);
 calculator.sq();
-console.log(calculator.setValue(2).multiply(6))
+console.log(calculator.setValue(2).multiply(6).getValue())
 ///////////////////////////////////////////////////////////////////////////----les 9----////////////////////////////////////////////////////////////////
 
