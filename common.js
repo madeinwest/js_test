@@ -555,8 +555,9 @@ let calculator = (function(){
 	}
 	function multiply(multp){
 		value *= multp
+		return this
 	}
-	function sq (sqVal){
+	function sq (){
 		value *= value;
 	}
 	function getValue(){
@@ -573,6 +574,6 @@ let calculator = (function(){
 calculator.setValue(2);
 calculator.multiply(6);
 calculator.sq();
-console.log(value)
+console.log(calculator.setValue(2).multiply(6))
 ///////////////////////////////////////////////////////////////////////////----les 9----////////////////////////////////////////////////////////////////
 
