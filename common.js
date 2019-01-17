@@ -543,37 +543,39 @@
 // toDoString.setString(12345);
 // console.log(toDoString.reverse());
 ///////////////////////////////////////////////////////////////
-let value= 0;
-let calculator = (function(){
-	function setValue(newValue){
-		value=newValue;
-		return this
-	}
-	function plus(amp){
-		value += amp;
-		return this
-	}
-	function multiply(multp){
-		value *= multp
-		return this
-	}
-	function sq (){
-		value *= value;
-	}
-	function getValue(){
-		return value
-	}
-	return{
-		setValue:setValue,
-		plus: plus,
-		multiply: multiply,
-		sq:sq,
-		getValue:getValue
-	}
-}());
-calculator.setValue(2);
-calculator.multiply(6);
-calculator.sq();
-console.log(calculator.setValue(2).multiply(6).getValue())
+// let value= 0;
+// let calculator = (function(){
+// 	function setValue(newValue){
+// 		value=newValue;
+// 		return this
+// 	}
+// 	function plus(amp){
+// 		value += amp;
+// 		return this
+// 	}
+// 	function multiply(multp){
+// 		value *= multp
+// 		return this
+// 	}
+// 	function sq (){
+// 		value *= value;
+// 	}
+// 	function getValue(){
+// 		return value
+// 	}
+// 	return{
+// 		setValue:setValue,
+// 		plus: plus,
+// 		multiply: multiply,
+// 		sq:sq,
+// 		getValue:getValue
+// 	}
+// }());
+// calculator.setValue(2);
+// calculator.multiply(6);
+// calculator.sq();
+// console.log(calculator.setValue(2).multiply(6).getValue())
 ///////////////////////////////////////////////////////////////////////////----les 9----////////////////////////////////////////////////////////////////
 
+
+///////////////////////////////////////////////////////////////////////////----les 10----////////////////////////////////////////////////////////////////
