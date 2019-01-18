@@ -576,6 +576,41 @@
 // calculator.sq();
 // console.log(calculator.setValue(2).multiply(6).getValue())
 ///////////////////////////////////////////////////////////////////////////----les 9----////////////////////////////////////////////////////////////////
+// function Planet(name){
+// 	this.name=name;
+// 	this.getName=function(){
+// 		return 'Planet name is ' + this.name
+// 	}
+// }
+// function planetWithSatellite(name, satelliteName){
+// 	this.satelliteName = satelliteName;
+// 	Planet.apply(this, arguments);
+// 	let originalFunc = this.getName;
+// 	this.getName = function(){
+// 		return 'Planet name is ' + this.name + '. The satellite is ' + this.satelliteName
+// 	}
+// }
 
+// let earth= new planetWithSatellite('earth', 'moon');
+//////////////////////////////////////////////////////////////////
+function building(name,flors){
+	this.name = name;
+	this.flors = flors;
+	this.getFlors=function(){
+		return this.flors
+	}
+}
+function livingBuilding(name,flors,appOnFlor){
+	this.appOnFlor = appOnFlor;
+	building.apply(this, arguments);
+	let newFNC = this.getFlors;
+	this.getFlors = function(){
+		return {flors:this.flors,
+		allFlors:5*appOnFlor}
+	}
+}
+
+let newBuild = new livingBuilding('first', 10, 4);
+console.log(newBuild.getFlors())
 
 ///////////////////////////////////////////////////////////////////////////----les 10----////////////////////////////////////////////////////////////////
